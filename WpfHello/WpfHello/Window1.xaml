@@ -9,12 +9,34 @@
     </Window.Resources>
     <Grid DataContext="{StaticResource userViewSource}">
         <Button x:Name="exitButton" Content="Exit" HorizontalAlignment="Left" Margin="76,262,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <DataGrid x:Name="userDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="168,69,249,141" RowDetailsVisibilityMode="VisibleWhenSelected">
+        <DataGrid x:Name="userDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="588,69,28,141" RowDetailsVisibilityMode="VisibleWhenSelected">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="iduserColumn" Binding="{Binding iduser}" Header="iduser" Width="100"/>
                 <DataGridTextColumn x:Name="nameColumn" Binding="{Binding name}" Header="name" Width="200"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Grid x:Name="grid1" HorizontalAlignment="Left" Margin="123,56,0,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Content="name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <TextBox x:Name="nameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding name, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+        </Grid>
+        <Grid x:Name="grid2" HorizontalAlignment="Left" Margin="162,170,0,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Content="name:" Grid.Column="0" HorizontalAlignment="Left" Margin="-89,-18,-49,-26" Grid.Row="0" VerticalAlignment="Center" Height="76" Grid.ColumnSpan="2" Width="199"/>
+            <Label x:Name="nameLabel" Content="{Binding name}" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+        </Grid>
 
     </Grid>
 </Window>
