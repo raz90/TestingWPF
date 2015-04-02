@@ -17,7 +17,7 @@
                         <ColumnDefinition Width="33*"/>
                         <ColumnDefinition Width="722*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Content="Tab1Button" Margin="-1028,-359,870,322" Grid.Column="2"/>
+                    <Button Content="Tab1Button" Margin="-1028,-359,870,322" Grid.Column="2" Click="Button_Click"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="tab2" Header="Tab2" HorizontalAlignment="Right" Width="107" Margin="0,-2,-37,0">

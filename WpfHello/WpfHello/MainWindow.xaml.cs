@@ -65,5 +65,14 @@ namespace WpfHello
             windows1.Show();
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MDIParent1 windows2;
+
+            windows2 = new MDIParent1();
+
+            windows2.Show();
+        }
+
     }
 }
